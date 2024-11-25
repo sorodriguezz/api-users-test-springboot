@@ -2,27 +2,27 @@ package com.api.apiusers.entity;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
+
 @Entity
 @Table(name = "users")
-public class User {
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id_user", unique = true, nullable = false)
     private String idUser;
 
-    @Column(name = "name")
-    private String name;
+    private String username;
 
-    @Column(name = "email")
     private String email;
 
-    public User() {
+    public UserEntity() {
     }
 
-    public User(String idUser, String email, String name) {
+    public UserEntity(String idUser, String username, String email) {
         this.idUser = idUser;
+        this.username = username;
         this.email = email;
-        this.name = name;
     }
 
     public String getIdUser() {
@@ -33,12 +33,12 @@ public class User {
         this.idUser = idUser;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {

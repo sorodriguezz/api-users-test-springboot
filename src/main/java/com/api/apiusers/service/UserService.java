@@ -1,11 +1,18 @@
 package com.api.apiusers.service;
 
-import com.api.apiusers.entity.User;
+import com.api.apiusers.dto.UserDto;
+import com.api.apiusers.entity.UserEntity;
 
 import java.util.List;
 
 public interface UserService {
-    List<User> getUsers();
+    List<UserEntity> getUsers();
 
-    User saveUser(User user);
+    UserEntity saveUser(UserEntity user);
+
+    UserEntity updateUser(String idUser, UserDto user);
+
+    UserEntity findUserById(String idUser);
+
+    void deleteUser(String idUser);
 }

@@ -3,7 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-secrets.properties
+# secrets.properties # es como el .env
 
 ### STS ###
 .apt_generated
